@@ -1,0 +1,30 @@
+ {
+    "name": "IPTV345",
+    "version": "1.0",
+    "description": "iptv345.com 播放器跳转, 用户需要先安装 Play HLS插件",
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "content_scripts": [{
+            "matches": [
+                "http://iptv345.com/?act=play*"
+            ],
+            "js": [
+                "content_script.js"
+            ],
+            "run_at": "document_start"
+    }],
+    "icons": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "manifest_version": 2
+}
